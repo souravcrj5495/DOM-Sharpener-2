@@ -8,9 +8,26 @@
 //     items[i].style.fontWeight = 'bold';
 // }
 //GET ELEMENTS BY TAG NAME
-var li = document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-li[1].textContent = 'hello 2';
-li[1].style.fontWeight = 'bold';
-li[1].style.backgroundColor = 'yellow'
+// var li = document.getElementsByTagName('li');
+// console.log(typeof li);
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent = 'hello 2';
+// li[1].style.fontWeight = 'bold';
+// li[1].style.backgroundColor = 'yellow'
+
+//QuerySelector 
+// var item = document.querySelector('.list-group-item:nth-child(2)');
+// item.style.backgroundColor = 'green';
+// var item2 = document.querySelector('.list-group-item:nth-child(3)');
+// item2.style.display = 'none';
+
+//QuerySelectorAll
+var secondItem = document.querySelectorAll('li');
+secondItem[1].style.color = 'green';
+
+var odd= document.querySelectorAll('li:nth-child(odd)');
+
+for (var i=0; i<odd.length; i++){
+    odd[i].style.backgroundColor = 'green';
+}
